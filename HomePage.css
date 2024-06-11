@@ -1,0 +1,135 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow:hidden; 
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%); /* Gradient background */
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.dashboard-content {
+  width: 90%;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  padding: 40px;
+  text-align: center;
+  overflow-y: auto; /* Scrollable content */
+  max-height: 90vh; /* Allow some margin for overflow */
+}
+
+.dashboard-content h2 {
+  margin-bottom: 30px;
+  color: #333333; /* Dark text color */
+  font-size: 28px;
+}
+
+.dashboard-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.dashboard-item {
+  background-color: #f5f5f5; /* Light gray background for items */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  flex: 1 0 30%; /* Flex properties for 3 items per row */
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for items */
+}
+
+.dashboard-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.dashboard-item h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.dashboard-item p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.dashboard-item .cost {
+  font-size: 18px;
+  color: #333333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.dashboard-item .like-button,
+.dashboard-item .cart-button {
+  position: absolute;
+  top: 10px;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.dashboard-item .like-button {
+  right: 50px;
+  background-color: #ff4081; 
+}
+
+.dashboard-item .cart-button {
+  right: 10px;
+  background-color: #ff7043; 
+}
+
+.dashboard-item .like-button:hover,
+.dashboard-item .cart-button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .dashboard-item {
+    flex: 1 0 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-item {
+    flex: 1 0 100%; 
+  }
+}
+
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s;
+}
+
+.notification.show {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,118 @@
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.entry-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+  background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  perspective: 1000px;
+  
+    height: 100vh; 
+    overflow-y: auto; 
+}
+
+.entry-page-content {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  animation: flipIn 1s ease-out;
+}
+
+.entry-page h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.entry-page p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #ffffff;
+  background-color: #f46b45;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  margin-top: 20px;
+}
+
+.cta-btn:hover {
+  background-color: #ffffff;
+  color: #f46b45;
+  transform: translateY(-3px);
+}
+
+.entry-page p a {
+  color: #ffdd57;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.entry-page p a:hover {
+  color: #ffffff;
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.container {
+  background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+  color: #fff;
+  padding: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff4500; 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #ff5722; 
+}
+
+.entry-page-container {
+  height: 100vh; 
+  overflow-y: auto; 
+}
